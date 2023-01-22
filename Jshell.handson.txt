@@ -1,0 +1,745 @@
+jshell> for (int i=10, i>=1; i--)
+   ...> {
+   ...>     System.out.printf("%d",i).println();}
+|  Error:
+|  ';' expected
+|  for (int i=10, i>=1; i--)
+|                  ^
+
+jshell> for (int i=10; i>=1; i--)
+   ...> {
+   ...>     System.out.printf("%d",i).println();}
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+jshell> for (int i=1; i<=10; i++)
+   ...> {
+   ...>     System.out.printf("%d",i*i).println();}
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+
+jshell> for (int i=1; i<=10; i++)
+   ...> {
+   ...>     System.out.printf("%d",i*i).println();}
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+
+jshell> for(int i=2; i<=20; i=i+2)
+   ...> {
+   ...>     System.out.printf("%d", i*i).println();
+   ...> }
+4
+16
+36
+64
+100
+144
+196
+256
+324
+400
+
+jshell> for(int i=1;i<=10; i=i+1)
+   ...> {
+   ...>     System.out.printf("%d", i*i).println();
+   ...> }
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+
+jshell> for(int i=1;i<=20; i=i+2)
+   ...> {
+   ...>     System.out.printf("%d", i*i).println();
+   ...> }
+1
+9
+25
+49
+81
+121
+169
+225
+289
+361
+
+jshell> sayHelloWorldThrice(){
+   ...>     System.out.println(" Hello World");
+   ...>
+|  Error:
+|  ';' expected
+|  sayHelloWorldThrice(){
+|                       ^
+|  Error:
+|  illegal character: '\u001b'
+|
+|      ^
+|  Error:
+|  not a statement
+|
+|          ^
+|  Error:
+|  ';' expected
+|
+|           ^
+|  Error:
+|  reached end of file while parsing
+|
+|            ^
+|  Error:
+|  cannot find symbol
+|    symbol:   method sayHelloWorldThrice()
+|  sayHelloWorldThrice(){
+|  ^-----------------^
+|  Error:
+|  package SysSystem does not exist
+|      SysSystem.out.println(" Hello World");
+|      ^-----------^
+
+jshell> void sayHelloWorldThrice()
+   ...> {
+   ...>     System.out.println(" Hello World"); System.out.println(" Hello World");System.out.println(" Hello World");
+   ...> }
+|  created method sayHelloWorldThrice()
+
+jshell> sayHelloWorldThrice()
+ Hello World
+ Hello World
+ Hello World
+
+jshell> void my FirstSteps()
+|  Error:
+|  '(' expected
+|  void my FirstSteps()
+|  ^------^
+
+jshell> void myFirstSteps()
+   ...> {
+   ...>     System.out.println(" I've created my first variable");
+   ...>     System.out.println(" I've created my first method");
+   ...>     System.out.println(" I've created my first loop");
+   ...>     System.out.println(" I'm excited to learn Java");
+   ...> }
+|  created method myFirstSteps()
+
+jshell> myFirstSteps()
+ I've created my first variable
+ I've created my first method
+ I've created my first loop
+ I'm excited to learn Java
+
+jshell>  /save backup.txt
+|  Error:
+|  illegal start of expression
+|   /save backup.txt
+|   ^
+
+jshell> /save backup.txt
+
+jshell> /edit sayHelloWorldTwice
+|  No such snippet: sayHelloWorldTwice
+
+jshell> /edit say HelloWorldTwice()
+|  No such snippet: say
+
+jshell> /edit sayHelloWorldTwice()
+|  No such snippet: sayHelloWorldTwice()
+
+jshell> /edit sayHelloWorldThrice()
+|  No such snippet: sayHelloWorldThrice()
+
+jshell> /list myFirstSteps()
+|  No such snippet: myFirstSteps()
+
+jshell> sayHelloWorld(5)
+|  Error:
+|  cannot find symbol
+|    symbol:   method sayHelloWorld(int)
+|  sayHelloWorld(5)
+|  ^-----------^
+
+jshell>
+        sayHelloWorldTwice(2)
+|  Error:
+|  cannot find symbol
+|    symbol:   method sayHelloWorldTwice(int)
+|  sayHelloWorldTwice(2)
+|  ^----------------^
+
+jshell> void sayHelloWorld(int noOfTimes){
+   ...> }
+|  created method sayHelloWorld(int)
+
+jshell> sayHelloWorld(5)
+
+jshell> {
+   ...> }
+
+jshell> void sayHelloWorld( int noOfTimes){
+   ...>     System.out.println(noOfTimes)
+   ...> }
+|  Error:
+|  ';' expected
+|      System.out.println(noOfTimes)
+|                                   ^
+
+jshell> void sayHelloWorld( int noOfTimes){
+   ...>     System.out.println(noOfTimes);
+   ...> }
+|  modified method sayHelloWorld(int)
+
+jshell> sayHelloWorld(int noOfTimes){
+   ...>     for(int i=1; i<=noOfTimes;i++){
+   ...>     System.out.println("Hello World")
+   ...> }}
+   ...>
+   ...>     sayHelloWorld(2)
+   ...>
+|  Error:
+|  '.class' expected
+|  sayHelloWorld(int noOfTimes){
+|                    ^
+
+jshell> sayHelloWorld(2)
+2
+
+jshell> sayHelloWorld(int noOfTimes){
+   ...>     for(int i=1; i<=noOfTimes;i++){
+   ...>     System.out.println("Hello World");
+   ...> }}
+   ...>
+   ...>     sayHelloWorld(2)
+|  Error:
+|  '.class' expected
+|  sayHelloWorld(int noOfTimes){
+|                    ^
+
+jshell> sayHelloWorld()
+|  Error:
+|  method sayHelloWorld in class  cannot be applied to given types;
+|    required: int
+|    found:    no arguments
+|    reason: actual and formal argument lists differ in length
+|  sayHelloWorld()
+|  ^-----------^
+
+jshell> void sayHelloWorld(int noOfTimes){
+   ...>     for(inti=1; i<=noOfTimes; i++)
+   ...>     {
+   ...>         System.out.println("Hello World");
+   ...>     }
+   ...> }
+|  modified method sayHelloWorld(int), however, it cannot be invoked until variable inti, and variable i are declared
+
+jshell> void sayHelloWorld(int noOfTimes){
+   ...>     for(int i=1; i<=noOfTimes; i++)
+   ...>     {
+   ...>         System.out.println("Hello World");
+   ...>     }
+   ...> }
+|  modified method sayHelloWorld(int)
+
+jshell> sayHelloWorld(3)
+Hello World
+Hello World
+Hello World
+
+jshell> void printNumbers(int n)
+   ...> {
+   ...>     for(int i=1; i<=n; i++){
+   ...>         System.out.println( "print numbers from 1 to n")
+   ...>     }
+   ...> }
+|  Error:
+|  ';' expected
+|          System.out.println( "print numbers from 1 to n")
+|                                                          ^
+
+jshell> void printNumbers(int n)
+   ...> {
+   ...>     for(int i=1; i<=n; i++){
+   ...>         System.out.println( "print numbers from 1 to n");
+   ...>     }
+   ...> }
+|  created method printNumbers(int)
+
+jshell> printNumbers(n)
+|  Error:
+|  cannot find symbol
+|    symbol:   variable n
+|  printNumbers(n)
+|               ^
+
+jshell> void printNumbers(int n)
+   ...> {
+   ...>     for(int i=1; i<=n; i++){
+   ...>         System.out.println(i);
+   ...>     }
+   ...> }
+|  modified method printNumbers(int)
+
+jshell>
+
+jshell> printNumbers(1)
+1
+
+jshell> printNumbers(10)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+jshell> void printSquaresOfNumbers(int n)
+   ...> {
+   ...>     for (int i=1;i<=n;i++){
+   ...>         System.out.println(i*i);
+   ...>     }
+   ...> }
+|  created method printSquaresOfNumbers(int)
+
+jshell> printSquaresOfNumbers(5)
+1
+4
+9
+16
+25
+
+jshell> void printMultiplicationTable()
+   ...> {
+   ...>     for(int i =1; i<=n; i++)
+   ...>     {
+   ...>         System.out.println(i*n);}}
+|  created method printMultiplicationTable(), however, it cannot be invoked until variable n is declared
+
+jshell> void printMultiplicationTable(int n)
+   ...> {
+   ...>     for(int i =1; i<=n; i++)
+   ...>     {
+   ...>         System.out.println(i*n);}}
+|  created method printMultiplicationTable(int)
+
+jshell> printMultiplicationTable(2)
+2
+4
+
+jshell> void printMultiplicationTable(int n)
+   ...> {
+   ...>     for(int i =1; i<=n; i++)
+   ...>     {
+   ...>         System.out.println(i*(n+1));}}
+|  modified method printMultiplicationTable(int)
+
+jshell> printMultiplicationTable(2)
+3
+6
+
+jshell> void printMultiplicationTable(int n)
+   ...> {
+   ...>     for(int i =1; i<=n+1; i++)
+   ...>     {
+   ...>         System.out.println(i*n);}}
+|  modified method printMultiplicationTable(int)
+
+jshell> printMultiplicationTable(2)
+2
+4
+6
+
+jshell> void printMultiplicationTable(int n)
+   ...> {
+   ...>     for(int i=2; i<=n+1; i++)
+   ...>     {
+   ...>         System.out.println(i*n);}}
+|  modified method printMultiplicationTable(int)
+
+jshell> printMuliplicationMethod(2)
+|  Error:
+|  cannot find symbol
+|    symbol:   method printMuliplicationMethod(int)
+|  printMuliplicationMethod(2)
+|  ^----------------------^
+
+jshell> printMultiplicationMethod(2)
+|  Error:
+|  cannot find symbol
+|    symbol:   method printMultiplicationMethod(int)
+|  printMultiplicationMethod(2)
+|  ^-----------------------^
+
+jshell> printMultiplicationTable(2)
+4
+6
+
+jshell> void printMultiplicationTable(int n)
+   ...> {
+   ...>     for(int i=1; i<=10; i++)
+   ...>     {
+   ...>         System.out.println(i*n);}}
+|  modified method printMultiplicationTable(int)
+
+jshell> printMultiplicationTable(2)
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+jshell> printMultiplicationTable(4)
+4
+8
+12
+16
+20
+24
+28
+32
+36
+40
+
+jshell> printMultiplicationTable()
+|  attempted to call method printMultiplicationTable() which cannot be invoked until variable n is declared
+
+jshell> Math.max(1,2)
+$38 ==> 2
+
+jshell> Math.max(1,2,6)
+|  Error:
+|  no suitable method found for max(int,int,int)
+|      method java.lang.Math.max(int,int) is not applicable
+|        (actual and formal argument lists differ in length)
+|      method java.lang.Math.max(long,long) is not applicable
+|        (actual and formal argument lists differ in length)
+|      method java.lang.Math.max(float,float) is not applicable
+|        (actual and formal argument lists differ in length)
+|      method java.lang.Math.max(double,double) is not applicable
+|        (actual and formal argument lists differ in length)
+|  Math.max(1,2,6)
+|  ^------^
+
+jshell> Math.min(2.4)
+|  Error:
+|  no suitable method found for min(double)
+|      method java.lang.Math.min(int,int) is not applicable
+|        (actual and formal argument lists differ in length)
+|      method java.lang.Math.min(long,long) is not applicable
+|        (actual and formal argument lists differ in length)
+|      method java.lang.Math.min(float,float) is not applicable
+|        (actual and formal argument lists differ in length)
+|      method java.lang.Math.min(double,double) is not applicable
+|        (actual and formal argument lists differ in length)
+|  Math.min(2.4)
+|  ^------^
+
+jshell> Math.min(2,4)
+$39 ==> 2
+
+jshell> void sum(int firstNumber, secondNumber)
+   ...> {
+   ...>     int sum= firstNumber+secondNumber;
+   ...>     {
+   ...>         System.out.println(sum);}
+   ...> }
+|  Error:
+|  <identifier> expected
+|  void sum(int firstNumber, secondNumber)
+|                                        ^
+
+jshell> void sum(int firstNumber, secondNumber)
+   ...> {
+   ...>     int sum = firstNumber + secondNumber;
+   ...>             System.out.println(sum);
+   ...> }
+|  Error:
+|  <identifier> expected
+|  void sum(int firstNumber, secondNumber)
+|                                        ^
+
+jshell> void sum(int firstNumber,int secondNumber)
+   ...> {
+   ...>     int sum = firstNumber + secondNumber;
+   ...>             System.out.println(sum);
+   ...> }
+|  created method sum(int,int)
+
+jshell> sum(78,98)
+176
+
+jshell> void sum(int numOne, int numTwo, int numThree)
+   ...> {
+   ...>     int sum= numOne+numTwo+numThree;
+   ...>     System.out.println(sum);
+   ...> }
+|  created method sum(int,int,int)
+
+jshell> sum(3.768,999)
+|  Error:
+|  incompatible types: possible lossy conversion from double to int
+|  sum(3.768,999)
+|      ^---^
+
+jshell> sum(789,987,7654)
+9430
+
+jshell> /list sum
+
+  40 : void sum(int firstNumber,int secondNumber)
+       {
+           int sum = firstNumber + secondNumber;
+                   System.out.println(sum);
+       }
+  42 : void sum(int numOne, int numTwo, int numThree)
+       {
+           int sum= numOne+numTwo+numThree;
+           System.out.println(sum);
+       }
+
+jshell> int sumOfTwoNumbers(int firstNumber, int secondNumber)
+   ...> {
+   ...>     int sum= firstNumber + secondNumber;
+   ...>     return sum;
+   ...> }
+|  created method sumOfTwoNumbers(int,int)
+
+jshell> sunOfTwoNumbers(2,3)
+|  Error:
+|  cannot find symbol
+|    symbol:   method sunOfTwoNumbers(int,int)
+|  sunOfTwoNumbers(2,3)
+|  ^-------------^
+
+jshell> sumOfTwoNumbers(8,9)
+$45 ==> 17
+
+jshell> int sum = sumOfTwoNumbers(1,1)
+sum ==> 2
+
+jshell> int sumOfThreeNumbers(int oneNumber, int twoNumber, int threeNumber)
+   ...> {
+   ...>     int sum= oneNumber+ twoNumber + threeNumber;
+   ...>     return sum;
+   ...> }
+   ...>
+|  created method sumOfThreeNumbers(int,int,int)
+
+jshell> int sum = sumOfThreeNumbers(7, 8, 909)
+sum ==> 924
+
+jshell> int angle( int angleOne, int angleTwo)
+   ...> {
+   ...>     int angleThree= (angleOne+angleTwo)- 180;
+   ...>     return angle;
+   ...> }
+|  created method angle(int,int), however, it cannot be invoked until variable angle is declared
+
+jshell> int angle( int angleOne, int angleTwo)
+   ...> {
+   ...>     int angleThree= (angleOne+angleTwo)- 180;
+   ...>     return angleThree;
+   ...> }
+|  modified method angle(int,int)
+
+jshell> int thirdAngle= angle(60,70)
+thirdAngle ==> -50
+
+jshell> int angle( int angleOne, int angleTwo)
+   ...> {
+   ...>     int angleThree= (angleOne+angleTwo);ngleThree;
+   ...> }
+|  Error:
+|  not a statement
+|      int angleThree= (angleOne+angleTwo);ngleThree;
+|                                          ^-------^
+|  Error:
+|  missing return statement
+|  {
+|  ^
+
+jshell> int angle( int angleOne, int angleTwo)
+   ...> {
+   ...>     int angleThree=180 - (angleOne+angleTwo); return angleThree;
+   ...> }
+|  created method angle(int,int)
+
+jshell> int thirdAngle= angle(45, 45)
+thirdAngle ==> 90
+
+jshell> class Country{
+   ...> }
+|  created class Country
+
+jshell> Country india= new Country()
+india ==> Country@567d299b
+
+jshell> Country usa = newCountry()
+|  Error:
+|  cannot find symbol
+|    symbol:   method newCountry()
+|  Country usa = newCountry();
+|                ^--------^
+
+jshell> Country usa = new Country()
+usa ==> Country@59690aa4
+
+jshell> class Planet{
+   ...> }
+|  created class Planet
+
+jshell> Planet mars= new Planet()
+mars ==> Planet@1761e840
+
+jshell> Planet earth = new Earth()
+|  Error:
+|  cannot find symbol
+|    symbol:   class Earth
+|  Planet earth = new Earth();
+|                     ^---^
+
+jshell> Planet earth = new Planet()
+earth ==> Planet@5ecddf8f
+
+jshell> class Planet{
+   ...>     void revolve(){
+   ...>     System.out.println("Revolve");}
+   ...> }
+|  replaced class Planet
+|    update replaced variable mars, reset to null
+|    update replaced variable earth, reset to null
+
+jshell> Planet earth = new Planet()
+earth ==> Planet@2280cdac
+
+jshell> Planet mars= new Planet()
+mars ==> Planet@1517365b
+
+jshell> revolve()
+|  Error:
+|  cannot find symbol
+|    symbol:   method revolve()
+|  revolve()
+|  ^-----^
+
+jshell> Planet.revolve()
+|  Error:
+|  non-static method revolve() cannot be referenced from a static context
+|  Planet.revolve()
+|  ^------------^
+
+jshell> earth.revolve()
+Revolve
+
+jshell> mars.revolve()
+Revolve
+
+jshell> Country
+|  Error:
+|  cannot find symbol
+|    symbol:   variable Country
+|  Country
+|  ^-----^
+
+jshell> class Country{
+   ...>     void comingSoon(){
+   ...>        System.out.println("Coming soon");
+   ...> }}
+   ...>     Country kenya= new Country()
+   ...>
+|  replaced class Country
+|    update replaced variable india, reset to null
+|    update replaced variable usa, reset to null
+kenya ==> Country@7d4793a8
+
+jshell> Country nigeria= new Country()
+nigeria ==> Country@5479e3f
+
+jshell> nigeria.comingSoon()
+Coming soon
+
+jshell> kenya.comingSoon()
+Coming soon
+
+jshell> /list Country
+
+  65 : class Country{
+           void comingSoon(){
+              System.out.println("Coming soon");
+       }}
+
+jshell> /list Planet
+
+  60 : class Planet{
+           void revolve(){
+           System.out.println("Revolve");}
+       }
+
+jshell>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
